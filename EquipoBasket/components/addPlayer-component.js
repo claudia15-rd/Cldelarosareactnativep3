@@ -129,10 +129,6 @@ export default function addPlayerComponent(props) {
                             Guardar Jugador
                         </Text>
                     </TouchableOpacity>
-
-
-
-
                 </View>
 
 

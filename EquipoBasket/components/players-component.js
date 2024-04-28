@@ -44,18 +44,19 @@ export default function playersComponent(props) {
             }
         }
         getLista()
-    }, [lista])
+    }, [])
 
-
+//[lista] Lo he comentado porque cada vez se va actualizando y ha hecho que excedamos firebase
 
 
     return (
         <ScrollView>
+        {/*
             <View>
                 <TouchableOpacity style={styless.boton} onPress={()=>props.navigation.navigate('addPlayers')} >
                     <Text style={styless.textoBoton}>Añadir Jugadores</Text>
                 </TouchableOpacity>
-            </View>
+    </View> */}
 
             <View style={styless.contenedor}>
                 {lista.map((pla)=>(

@@ -1,5 +1,5 @@
 import React, {Component, useState, useEffect} from 'react'
-import { Text,StyleSheet,View, TextInput, TouchableOpacity, Alert} from 'react-native'
+import { Text,StyleSheet,View, TextInput, TouchableOpacity, Alert,Image} from 'react-native'
 
 import appFirebase from '../credencialesFirebase'
 import {getFirestore, collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc} from 'firebase/firestore'
@@ -41,16 +41,26 @@ export default function detailComponent(props) {
         <View>
             <View style={styles.contenedor}>
                 <Text style={styles.texto}>Nombre: {player.name}</Text>
+                <Image source={{uri: player.img}}
+                  style={{width: 130 , height: 130}} />
                 <Text style={styles.texto}>Descripción: {player.description}</Text>
                 <Text style={styles.texto}>Edad: {player.age}</Text>
                 <Text style={styles.texto}>Número de anillos:  {player.anillos}</Text>
                 <Text style={styles.texto}>Posicion: {player.position}</Text>
-                <Text style={styles.texto}>Imagen: {player.img}</Text>
+
+                <TouchableOpacity style={styles.botonEliminar} onPress={()=>{props.navigation.navigate('video', {
+                    playerVideo:player.video
+                    })}} >
+                    <Text style={styles.textoEliminar}>Ver video</Text>
+                </TouchableOpacity> 
+
+                            
+             {/*   <Text style={styles.texto}>Imagen: {player.img}</Text> 
                 <Text style={styles.texto}>Video: {player.video}</Text>
 
                 <TouchableOpacity style={styles.botonEliminar} onPress={()=>deletePlayer(props.route.params.playerId)} >
                     <Text style={styles.textoEliminar}>Elimiar Jugador</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
 
             </View>
@@ -81,8 +91,8 @@ const styles=StyleSheet.create({
         marginTop: 10
     },
     botonEliminar: {
-        backgroundColor: '#F4D03F',
-        borderColor: '#FC4F00',
+        backgroundColor: '#FFC300',
+        borderColor: '#FFC300',
         borderWidth: 3,
         borderRadius: 20,
         marginLeft: 20,
