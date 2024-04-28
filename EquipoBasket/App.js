@@ -21,13 +21,13 @@ export default function App() {
           options={{
             title:"JUGADORES DE BALONCESTO",
             headerTitleAlign:"center",
-            headerStyle: {backgroundColor: "#F4D03F"},
+            headerStyle: {backgroundColor: "#FFC300"},
             headerTintColor: "black",
 
           }}
         />
 
-        <Stack.Screen 
+      {/*}  <Stack.Screen 
           name="addPlayers"
           component={addPlayerComponent}
           options={{
@@ -36,7 +36,7 @@ export default function App() {
             headerStyle: {backgroundColor: "#F4D03F"},
             headerTintColor: "black",
           }}
-        />
+        /> */}
 
         <Stack.Screen 
           name="details" 
