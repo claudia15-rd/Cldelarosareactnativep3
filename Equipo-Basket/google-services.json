@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "299055623733",
+    "firebase_url": "https://equipo-basket-frontenders-default-rtdb.firebaseio.com",
+    "project_id": "equipo-basket-frontenders",
+    "storage_bucket": "equipo-basket-frontenders.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299055623733:android:b7bcfcbe5ecee320244b7c",
+        "android_client_info": {
+          "package_name": "com.frontenders.equipobasket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq2hWgS0TRoMxlfry3SDfn8sVbQS61YCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
